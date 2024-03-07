@@ -3,20 +3,11 @@
 #include <math.h>
 #include <string.h>
 
+#include "functions.c"
 
 
 
 
-
-
-union {
-
-int I;
-float F;
-double D;
-char C;
-
-}container;
 
 
 
@@ -43,6 +34,9 @@ if(mode==2){
 if(mode==3){
     printf("Geben Sie eine beliebige Kommazahl im Format XX.XX ein: \n");
     scanf("%lf", &container.D);
+    printf("--%lf\n", container.D);
+
+    case_double();
 }
 if(mode==4){
     printf("Geben Sie ein beliebeiges Zeichen ein: \n");
