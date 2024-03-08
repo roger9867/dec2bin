@@ -3,7 +3,7 @@
 #include <math.h>
 
 
-void case_double ();
+long* case_double ();
 
 
 
@@ -21,28 +21,16 @@ char C;
 
 
 
-void case_double (){
+long* case_double (){
 
-    
-      //printf("%d\n", container.D);
-//char array[65];      
-long array2[65];
+         
+long* box_for_bin = (long*)malloc(sizeof(long)+1);
 
       for(int i = 0; i<64; i++){
-     // char array[65];
-      //sprintf(array, "%d", container.I);
-      // printf("%s\n", array);
-      //int res = atoi(array);
-      //printf("%d\n", res);
-
-      // int test = ((int)pow(2,i) & res)>>i;
-      //printf("%d\n", test);
-      //int array2[65];
-       array2[63-i] = ((long)pow(2,i) & container.L)>>i;
+   
+      box_for_bin[63-i] = localize_bit(i);
       
       }
-      for(int j= 0; j<64; j++){
-      printf("%ld", array2[j]);
-      }
-      printf("\n");
+  
+      return box_for_bin;
 }
