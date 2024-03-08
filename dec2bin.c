@@ -25,7 +25,7 @@ scanf("%d", &mode);
 
 if(mode==1){
     printf("Geben Sie eine beliebige Ganzzahl ein: \n");
-    scanf("%d", &container.I);
+    scanf("%lu", &container.L);
 }
 if(mode==2){
     printf("Geben Sie eine beliebige Kommazahl im Format XX.XX ein: \n");
@@ -34,7 +34,7 @@ if(mode==2){
 if(mode==3){
     printf("Geben Sie eine beliebige Kommazahl im Format XX.XX ein: \n");
     scanf("%lf", &container.D);
-    printf("--%lf\n", container.D);
+   // printf("--%lf\n", container.D);
 
     case_double();
 }
